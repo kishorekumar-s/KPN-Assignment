@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Order Products">
+        <template if:true={tableData}>
+            <lightning-button label="Activate Order" onclick={activateOrder} slot="actions"></lightning-button>
+            <lightning-datatable
+            key-field="Id"
+            data={tableData}    
+            columns={columns} hide-checkbox-column>
+    </lightning-datatable>
+   
+        </template>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Available Products">
+        <lightning-button label="Add Products" slot="actions"  onclick={getSelectedName}></lightning-button>
+        <template if:true={tableData}>
+            <lightning-datatable
+            key-field="Id"
+            data={tableData}    
+            columns={columns} onrowselection={getSelectedProducts}>
+    </lightning-datatable>
+        </template>
+
+    </lightning-card>       
+</template>
